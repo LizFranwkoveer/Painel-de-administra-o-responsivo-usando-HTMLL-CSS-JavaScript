@@ -3,17 +3,17 @@
 
  /* ---------------  VARIÁVEIS RAIZ -----------------*/
  :root {
-     --color-primary: #7380ec;
-     --color-danger: #ff7782;
-     --color-sucess: #41f1b6;
-     --color-warning: #ffbb55;
-     --color-white: #fff;
-     --color-infor-dark: #7d8da1;
-     --color-info-light: #dce1eb;
-     --color-dark: #363949;
-     --color-light: rgba(132, 139, 200, 0.18);
-     --color-primary-variant: #111e88;
-     --color-dark-variant: #677483;
+     --color-primaria: #7380ec;
+     --color-perigo: #ff7782;
+     --color-sucesso: #41f1b6;
+     --color-aviso: #ffbb55;
+     --color-branco: #fff;
+     --color-infor-escuro: #7d8da1;
+     --color-info-claro: #dce1eb;
+     --color-escuro: #363949;
+     --color-claro: rgba(132, 139, 200, 0.18);
+     --color-primaria-variante: #111e88;
+     --color-escuro-variante: #677483;
      --color-blackgroud: #f6f6f9;
 
      --card-border-radius: 2rem;
@@ -49,7 +49,7 @@
      background: var(--color-blackgroud);
      user-select: none;
      overflow-x: hidden;
-     color: var(--color-dark);
+     color: var(--color-escuro);
  }
 
  .container {
@@ -61,7 +61,7 @@
  }
 
  a {
-     color: var(--color-dark);
+     color: var(--color-escuro);
  }
 
  img {
@@ -101,32 +101,32 @@
      overflow: hidden;
  }
 
- .text-muted {
-     color: var(--color-infor-dark);
+ .texto-silenciado {
+     color: var(--color-infor-escuro);
  }
 
  p {
-     color: var(--color-dark-variant);
+     color: var(--color-escuro-variante);
  }
 
  b {
-     color: var(--color-dark);
+     color: var(--color-escuro);
  }
 
  .primário {
-     color: var(--color-primary);
+     color: var(--color-primario);
  }
 
  .perigo {
-     color: var(--color-danger);
+     color: var(--color-perigo);
  }
 
  .sucesso {
-     color: var(--color-sucess);
+     color: var(--color-sucesso);
  }
 
  .aviso {
-     color: var(--color-warning);
+     color: var(--color-aviso);
  }
 
  aside {
@@ -170,7 +170,7 @@
 
  aside .sidebar a {
      display: flex;
-     color: var(--color-infor-dark);
+     color: var(--color-infor-escuro);
      margin: 2rem;
      gap: 1rem;
      align-items: center;
@@ -190,8 +190,8 @@
  }
 
  aside .asidebar a.active {
-     background: var(--color-light);
-     color: var(--color-primary);
+     background: var(--color-claro);
+     color: var(--color-primaria);
      margin-left: 0;
  }
 
@@ -199,16 +199,16 @@
      content: "";
      width: 6px;
      height: 100%;
-     background: var(--color-primary);
+     background: var(--color-primaria);
  }
 
  aside .sidebar a.active span {
-     color: var(--color-primary);
+     color: var(--color-primaria);
      margin-left: calc(1rem - 3px);
  }
 
  aside .sidebar a:hover {
-     color: var(--color-primary);
+     color: var(--color-primaria);
      margin-left: calc(1rem - 3px);
  }
 
@@ -217,16 +217,16 @@
  }
 
  aside .sidebar .message-count {
-     background: var(--color-danger);
-     color: var(--color-white);
+     background: var(--color-perigo);
+     color: var(--color-branco);
      padding: 2px 10px;
      font-size: 11px;
      border-radius: var(--border-radius-1);
  }
 
  aside .sidebar .message-count {
-     background: var(--color-danger);
-     color: var(--color-white);
+     background: var(--color-perigo);
+     color: var(--color-branco);
      padding: 2px 10px;
      font-size: 11px;
      border-radius: var(--border-radius-1);
@@ -234,115 +234,22 @@
 
  /*=============MAIN================*/
  main {
-     margin-top: 1.4 rem;
+     margin-top: 1.4rem;
  }
 
- main .date {
+ main .data {
      display: inline-block;
-     background: var(--color-light);
+     background: var(--color-claro);
      border-radius: var(--border-radius-1);
      margin-top: 1rem;
      padding: 0.5rem 1.6rem;
  }
 
- main .date input[type="date"] {
+ main .data input[type='date'] {
      background: transparent;
-     color: var(--color-dark);
+     color: var(--color-escuro);
  }
 
- main .total {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-auto-columns: 300px;
-     gap: 1.5rem;
+ .percepcao {
+    display: grid;
  }
-
- main .total>div {
-     background: var(--color-white);
-     padding: var(--card-padding);
-     border-radius: var(--card-border-radius);
-     margin-top: 1rem;
-     box-shadow: var(--box-shadow);
-     transition: all 300ms ease;
- }
-
- main .total>div:hover {
-     box-shadow: none;
- }
-
- main .total>div span {
-     background: var(--color-primary);
-     padding: 0.5rem;
-     border-radius: 50%;
-     color: var(--color-white);
-     font-size: 2rem;
- }
-
- main .total>div.Custo span {
-     background: var(--color-danger);
-
- }
-
- main .total>div.Renda span {
-     background: var(--color-sucess);
-
- }
-
- main .total>div .meio {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
- }
-
- main .total h3 {
-     margin: 1 rem 0.6 rem;
-     font-size: 1 rem;
- }
-
- main .total progresso {
-     position: relative;
-     width: 92px;
-     height: 92px;
-     border-radius: 50%;
- }
-
- main .total svg {
-     width: 7 rem;
-     height: 7 rem;
- }
-
- main .total svg circle{
-     fill: none;
-     stroke: var(--color-primary);
-     stroke-width: 14;
-     stroke-linecap: round;
-     transform: translate(5px, 5px);
-     stroke-dasharray: 110;
-     stroke-dashoffset: 92;
- }
-
- main .total .Venda svg circle{
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .total .Custo svg circle{
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-}
-
-main .total .Renda svg circle{
-    stroke-dashoffset: 35;
-    stroke-dasharray: 110;
-}
-
-main .total .Venda .progresso .números{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 30%;
-width: 200%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
